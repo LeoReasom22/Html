@@ -2,68 +2,223 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Journey to the West Mythology HTML Project">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mythology</title>
     <link rel="icon" type="image/x-icon" href="./images/logo.jpg">
+
+    <style>
+        body {
+            background-color: white;
+            border: 2px solid rgb(100, 146, 196);
+            border-radius: 20px;
+            margin: 40px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3 {
+            color: rgb(9, 14, 18);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        header img {
+            display: block;
+            height: 400px;
+            width: 300px;
+            margin: auto;
+        }
+
+        p, details {
+            font-size: 18px;
+            color: darkblue;
+        }
+
+        section ul, section ol {
+            font-size: 18px;
+            color: rgb(60, 85, 2);
+            margin-left: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .container figure {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .container img {
+            height: 200px;
+            width: 150px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            font-size: 18px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
 </head>
+
 <body>
-    <header> 
-        <h1><em>Journey To the West</em></h1> 
-        <h2><i>Introduction</i></h2>
-            <img src="./images/journeytothewest.jpg"  alt="journeytothewest">
-            <p><strong>Journey to the West </strong>is a famous Chinese novel by <u>Wu Cheng'en</u>.
-             It tells the story of the monk <mark>Tang Sanzang (Tripitaka)</mark> 
-             traveling to India for sacred scriptures, accompanied by <mark>Sun Wukong</mark>, <mark>Zhu Bajie</mark>, and<mark> Sha Wujing</mark>.
-              The novel mixes adventure, fantasy, and religion, and focuses on self-discipline and egitnlightenment.
-            </p>
-            <details>
-                <summary><u>Read more about Journey To The West</u></summary>
-                <blockquote><mark>“A thousand hardships lie on the road to enlightenment, but the heart that endures will reach the truth.”</mark></blockquote> 
-            Journey to the West (Chinese: 西遊記; pinyin: Xīyóu Jì)
-             is a Chinese novel published in the 16th century during the Ming dynasty 
-            and attributed to Wu Cheng'en. It is regarded as one of the great Chinese novels, 
-            and has been described as arguably the most popular
-             literary work in East Asia.[2] It was widely known in English-speaking countries through
-              the British scholar Arthur Waley's 1942 abridged translation Monkey.
-            </details> 
-    </header> 
-        <hr>
-        <div>
-        <h2><em>Characters</em></h2>
-        <h3>Character Traits & Powers</h3>
-        <ul>
-            <li><strong>Tang Sanzang:</strong> Kind, compassionate, wise</li>
-            <li><strong>Sun Wukong:</strong> 72 transformations, magic staff, cloud-riding</li>
-            <li><strong>Zhu Bajie:</strong> Lazy, loves food, humorous, uses nine-tooth rake</li>
-            <li><strong>Sha Wujing:</strong> Calm, patient, loyal, uses monk's spade</li>
-        </ul>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#journey">Journey</a></li>
+    </ul>
+</nav>
+
+<!-- Header / Introduction -->
+<header id="intro">
+    <h1>Journey To the West</h1>
+    <h2>Introduction</h2>
+
+    <img src="./images/journeytothewest.jpg" alt="Journey to the West">
+
+    <p>
+        <strong>Journey to the West</strong> is a famous Chinese novel by
+        <u>Wu Cheng'en</u>. It tells the story of the monk
+        <mark>Tang Sanzang (Tripitaka)</mark> traveling to India for sacred scriptures,
+        accompanied by <mark>Sun Wukong</mark>, <mark>Zhu Bajie</mark>, and
+        <mark>Sha Wujing</mark>.
+        The novel mixes adventure, fantasy, and religion, focusing on self-discipline
+        and enlightenment.
+    </p>
+
+    <details>
+        <summary><u>Read more about Journey to the West</u></summary>
+        <blockquote>
+            <mark>“A thousand hardships lie on the road to enlightenment, but the heart that endures will reach the truth.”</mark>
+        </blockquote>
+        Journey to the West (Chinese: 西遊記; pinyin: Xīyóu Jì) is a Chinese novel
+        published in the 16th century during the Ming dynasty. It is one of the
+        greatest classical Chinese novels and became famous in the English-speaking
+        world through Arthur Waley’s translation <em>Monkey</em>.
+    </details>
+</header>
+
+<hr>
+
+<!-- Characters -->
+<section id="characters">
+    <h2><em>Characters</em></h2>
+    <h3>Character Traits & Powers</h3>
+
+    <ul>
+        <li><strong>Tang Sanzang:</strong> Kind, compassionate, wise</li>
+        <li><strong>Sun Wukong:</strong> 72 transformations, magic staff, cloud-riding</li>
+        <li><strong>Zhu Bajie:</strong> Lazy, humorous, uses nine-tooth rake</li>
+        <li><strong>Sha Wujing:</strong> Calm, patient, loyal, uses monk’s spade</li>
+    </ul>
+
+    <div class="container">
+        <figure>
+            <img src="./images/monk.jpg" alt="Tang Sanzang">
+            <figcaption>
+                <a href="https://en.wikipedia.org/wiki/Tang_Sanzang" target="_blank">Tang Sanzang</a>
+            </figcaption>
+        </figure>
 
         <figure>
-        <img src="./images/monk.jpg" alt="Tan SanZang" >
-            <figcaption> <a href="https://en.wikipedia.org/wiki/Tang_Sanzang" target="_blank">Monk Tan SanZang</a></figcaption>
+            <img src="./images/monkey.jpg" alt="Sun Wukong">
+            <figcaption>
+                <a href="https://en.wikipedia.org/wiki/Sun_Wukong" target="_blank">Sun Wukong</a>
+            </figcaption>
+        </figure>
 
-        </figure><br>
         <figure>
-        <img src="./images/monkey.jpg" alt="SunWukong" >
-            <figcaption><a href="https://en.wikipedia.org/wiki/Sun_Wukong" target="_blank">Monkey king SunWukong</a></figcaption>
-        </figure><br>
+            <img src="./images/pig.jpg" alt="Zhu Bajie">
+            <figcaption>
+                <a href="https://en.wikipedia.org/wiki/Zhu_Bajie" target="_blank">Zhu Bajie</a>
+            </figcaption>
+        </figure>
+
         <figure>
-             <img src="./images/pig.jpg" alt="Zhu Bajie" >
-            <figcaption><a href="https://en.wikipedia.org/wiki/Zhu_Bajie" target="_top"> Bajie</a></figcaption>
-        </figure><br>
-        <figure>
-            <img src="./images/fish.jpg" alt="Sha Wujing"  >
-            <figcaption><a href="https://en.wikipedia.org/wiki/Sha_Wujing" target="_blank"> Wujing</a></figcaption>
+            <img src="./images/fish.jpg" alt="Sha Wujing">
+            <figcaption>
+                <a href="https://en.wikipedia.org/wiki/Sha_Wujing" target="_blank">Sha Wujing</a>
+            </figcaption>
         </figure>
     </div>
-    <hr>
-    <div>
-        <h2>Journey To the west record</h2>
-        <h3>Steps of the Journey</h3>
-        <ol>
-            <li>Depart from the Tang dynasty kingdom</li>
-            <li>Face demons and obstacles along the way</li>
-            <li>Learn lessons from each encounter</li>
-            <li>Reach India and collect the sacred scriptures</li>
-            <li>Return safely to China</li>
-        </ol>
+
+    <h3>Character Summary</h3>
+    <table>
+        <tr>
+            <th>Character</th>
+            <th>Role</th>
+            <th>Weapon</th>
+        </tr>
+        <tr>
+            <td>Sun Wukong</td>
+            <td>Protector</td>
+            <td>Magic Staff</td>
+        </tr>
+        <tr>
+            <td>Zhu Bajie</td>
+            <td>Warrior</td>
+            <td>Nine-tooth Rake</td>
+        </tr>
+        <tr>
+            <td>Sha Wujing</td>
+            <td>Guardian</td>
+            <td>Monk’s Spade</td>
+        </tr>
+    </table>
+</section>
+
+<hr>
+
+<!-- Journey -->
+<section id="journey">
+    <h2>Journey to the West Record</h2>
+    <h3>Steps of the Journey</h3>
+
+    <ol>
+        <li>Depart from the Tang dynasty kingdom</li>
+        <li>Face demons and obstacles along the way</li>
+        <li>Learn lessons from each encounter</li>
+        <li>Reach India and collect sacred scriptures</li>
+        <li>Return safely to China</li>
+    </ol>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Mythology Project | Created by You</p>
+</footer>
+
+</body>
+</html>
