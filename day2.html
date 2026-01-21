@@ -9,31 +9,18 @@
 
     <style>
         body {
-            background-color: white;
-            border: 2px solid rgb(100, 146, 196);
+            background: linear-gradient(135deg, #86c0d8, #e576dc, white);
+            border: 2px solid rgb(11, 16, 21);
             border-radius: 20px;
-            margin: 40px;
+            margin: 150px;
             padding: 20px;
             font-family: Arial, sans-serif;
-        }
+             box-shadow: 20px 20px 20px rgba(14, 12, 25, 0.1) ;
+        }      
 
         h1, h2, h3 {
             color: rgb(9, 14, 18);
             text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            color: darkblue;
         }
 
         header img {
@@ -45,29 +32,37 @@
 
         p, details {
             font-size: 18px;
-            color: darkblue;
+            font-family: Arial, sans-serif;
+            color: rgb(139, 0, 19);
         }
 
-        section ul, section ol {
+       section ul, ol {
             font-size: 18px;
-            color: rgb(60, 85, 2);
-            margin-left: 40px;
+            font-family: Arial, sans-serif;
+            color: rgb(139, 0, 19);
+            margin-left: 50px;
+           
         }
-
         .container {
-            display: flex;
-            justify-content: center;
+            display:flex;/* show row*/
+            justify-content:center;
             flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px;
+            
+
         }
 
         .container figure {
-            margin: 10px;
             text-align: center;
+           
         }
 
         .container img {
-            height: 200px;
-            width: 150px;
+            height: 250px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px rgba(14, 12, 25, 0.1) ;
         }
 
         table {
@@ -77,32 +72,21 @@
         }
 
         th, td {
-            border: 1px solid black;
+            border: 3px solid rgb(84, 192, 174);
             padding: 10px 15px;
             text-align: center;
+            height: 40px;
+            width: 150px;
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
-            color: gray;
         }
     </style>
 </head>
 
 <body>
-
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#characters">Characters</a></li>
-        <li><a href="#journey">Journey</a></li>
-    </ul>
-</nav>
-
-<!-- Header / Introduction -->
-<header id="intro">
+<header>
     <h1>Journey To the West</h1>
     <h2>Introduction</h2>
 
@@ -126,22 +110,21 @@
         Journey to the West (Chinese: 西遊記; pinyin: Xīyóu Jì) is a Chinese novel
         published in the 16th century during the Ming dynasty. It is one of the
         greatest classical Chinese novels and became famous in the English-speaking
-        world through Arthur Waley’s translation <em>Monkey</em>.
+        world through Arthur Waley's translation <em>Monkey</em>.
     </details>
 </header>
 
 <hr>
 
-<!-- Characters -->
-<section id="characters">
+<section>
     <h2><em>Characters</em></h2>
-    <h3>Character Traits & Powers</h3>
+    <h3>Characters & their Powers</h3>
 
     <ul>
         <li><strong>Tang Sanzang:</strong> Kind, compassionate, wise</li>
         <li><strong>Sun Wukong:</strong> 72 transformations, magic staff, cloud-riding</li>
         <li><strong>Zhu Bajie:</strong> Lazy, humorous, uses nine-tooth rake</li>
-        <li><strong>Sha Wujing:</strong> Calm, patient, loyal, uses monk’s spade</li>
+        <li><strong>Sha Wujing:</strong> Calm, patient, loyal, uses monk's spade</li>
     </ul>
 
     <div class="container">
@@ -194,15 +177,14 @@
         <tr>
             <td>Sha Wujing</td>
             <td>Guardian</td>
-            <td>Monk’s Spade</td>
+            <td>Monk's Spade</td>
         </tr>
     </table>
 </section>
 
 <hr>
 
-<!-- Journey -->
-<section id="journey">
+<section>
     <h2>Journey to the West Record</h2>
     <h3>Steps of the Journey</h3>
 
@@ -215,10 +197,8 @@
     </ol>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>&copy; 2026 Mythology Project | Created by You</p>
+    <p>&copy; 2026 Mythology Project</p>
 </footer>
-
 </body>
 </html>
