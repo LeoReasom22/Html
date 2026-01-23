@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four Card Feature Section</title>
+
+  <style>
+    :root {
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+      --drakgray: hsl(234, 12%, 34%);
+      --gray: hsl(229, 6%, 66%);
+      --font-poppins: 'Poppins';
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin:auto;
+      padding: 60px ;
+      font-family: var(--font-poppins) ;
+      background: #fafafa;
+      color: var(--drakgray);
+      font-size: 16px;
+    }
+    
+    header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 70px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    header h1 strong {
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: var(--gray);
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .card {
+      width: 300px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+
+    .supervisor {
+      border-top: 4px solid var(--cyan);
+      align-self: center;
+    }
+
+    .team {
+      border-top: 4px solid var(--red);
+    }
+
+    .karma {
+      border-top: 4px solid var(--orange);
+    }
+
+    .calculator {
+      border-top: 4px solid var(--blue);
+      align-self: center;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    .card img {
+      display: block;
+      margin-left: auto;
+      
+    }
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Reliable, efficient delivery</h1>
+    <h1><strong>Powered by Technology</strong></h1>
+    <p>
+      Our Artificial Intelligence powered tools use millions of project data
+      points to ensure that your project is successful.
+    </p>
+  </header>
+
+  <section class="container">
+
+    <div class="card supervisor">
+      <h2>Supervisor</h2>
+      <p>Monitors activity to identify project roadblocks.</p>
+      <img src="./imgchallenge/icon-supervisor.svg" alt="">
+    </div>
+
+    <div class="center">
+      <div class="card team">
+        <h2>Team Builder</h2>
+        <p>Scans our talent network to create the optimal team for your project.</p>
+        <img src="./imgchallenge/icon-team-builder.svg" alt="Team Builder">
+      </div>
+
+      <div class="card karma">
+        <h2>Karma</h2>
+        <p>Regularly evaluates our talent to ensure quality.</p>
+        <img src="./imgchallenge/icon-karma.svg" alt="Karma">
+      </div>
+    </div>
+
+    <div class="card calculator">
+      <h2>Calculator</h2>
+      <p>Uses data from past projects to provide better delivery estimates.</p>
+      <img src="./imgchallenge/icon-calculator.svg" alt="">
+    </div>
+
+  </section>
+
+</body>
+</html>
