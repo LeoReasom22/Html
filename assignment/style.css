@@ -16,7 +16,7 @@
     body {
       background: var(--off-white);
       color: var(--very-dark-blue);
-      margin: 0 auto;
+      margin: 0 auto; 
       padding-bottom: 40px;
 
     }
@@ -31,6 +31,10 @@
       align-items: center;
       padding: 60px;
     }
+        .menu-icon {
+      display: none;
+    }
+
   
 
    .tname{
@@ -190,7 +194,7 @@
       line-height: 1.5;
     }
     
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 
   header {
@@ -222,6 +226,19 @@
 }
   .card {
   margin-bottom: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 3px;
+    background: #000;
+    margin: 6px 0;
   }
 }
 
