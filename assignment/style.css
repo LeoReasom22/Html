@@ -1,0 +1,231 @@
+    :root {
+      --off-white: hsl(36, 100%, 99%);
+      --grayish-blue: hsl(233, 8%, 79%);
+      --dark-grayish-blue: hsl(236, 13%, 42%);
+      --very-dark-blue: hsl(240, 100%, 5%);
+      --soft-orange: hsl(35, 77%, 62%);
+      --soft-red: hsl(5, 85%, 63%);
+      --font-family: 'Inter', sans-serif;
+    }
+
+      * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    body {
+      background: var(--off-white);
+      color: var(--very-dark-blue);
+      margin: 0 auto;
+      padding-bottom: 40px;
+
+    }
+      .main{
+      max-width: 1200px;  
+      margin:0 auto ;
+      padding: 0 20px;
+    }
+    header {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      padding: 60px;
+    }
+  
+
+   .tname{
+    font-size: 50px;
+    font-weight: 800;
+   }
+    nav a {
+      font-size: 16px;
+      text-decoration: none;
+      color: var(--very-dark-blue);
+      margin-left: 30px;
+      
+      
+    }
+    nav a:hover {
+      color: var(--soft-red);
+    }
+    .container {
+      display: flex;
+      gap: 30px;
+      
+    }
+   .left{
+    flex: 2;
+   }
+    .imgbox img {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+      
+    }
+    .box2 {
+      display: flex;
+      flex: 1;
+      padding: 32px 24px;
+      flex-direction: column;
+      font-family: var(--font-family);
+      background-color: var(--very-dark-blue);
+    }
+    .box2 h1 {
+      color: var(--soft-orange);
+      font-size: 35px;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+    .box2 h2 {
+      color: var(--off-white);
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    hr{
+      border: 0;
+      border: 1px solid var(--dark-grayish-blue);
+      margin: 20px 0;
+    }
+    .box2 h2:hover{
+      color: var(--soft-orange);
+    }
+
+    .box2 p {
+     color: var(--grayish-blue);
+     font-size: 18px;
+    line-height: 1.6;
+     margin: bottom 30px;
+    
+    }
+    .bottomboxes{
+      display:flex;
+      gap: 30px;
+    }
+    
+    .box3{
+      flex: 1;
+      margin-top: 30px;
+      font-family: var(--font-family);
+      /* background-color: var(--soft-orange); */
+      padding: 15px;
+    }
+    .box3 h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .box4{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .box4 p{
+      color: var(--dark-grayish-blue);
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      
+    }
+    .box4btn{
+      background-color: var(--soft-red);
+      color: var(--off-white);
+      border: none;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-weight: 700;
+      cursor:pointer ;
+    }
+    .box4btn:hover{
+    background-color: var(--very-dark-blue);
+    }
+    .container .cardcontainer{
+      padding: 0 20px;
+    }
+    .cardcontainer {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 60px;}
+
+    .card{
+      display: flex;
+      gap: 20px;
+      /* flex:1; */
+
+    }
+    .cardcontent1{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+    }
+    .card img{
+      width: 130px;
+      height: 160px;
+    }
+    .number{
+      font-size: 35px;
+      font-weight: 700;
+      color: var(--soft-red);
+
+    }
+    .cardcontent1  h3{
+      font-size: 25px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    h3:hover{
+      color:var(--soft-red);
+      cursor:pointer ;
+    }
+    .cardcontent1 p{
+      font-size: 15px;
+      color: var(--dark-grayish-blue);
+      line-height: 1.5;
+    }
+    
+@media screen and (max-width: 768px) {
+
+
+  header {
+    padding: 40px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .container,.bottomboxes,.cardcontainer {
+    flex-direction: column;
+  }
+
+  .box3 h1 {
+    font-size: 50px;
+  }
+.box4 p {
+  font-size: 20px;
+}
+  .box2 {
+    margin-top: 30px;
+  }
+.cardcontent1 p {
+  font-size: 15px;
+}
+.cardcontent1 h3 {
+  text-align: left;
+}
+  .card {
+  margin-bottom: 20px;
+  }
+}
+
+    
+
+    
+
