@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunnyside - Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=League+Spartan:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.17.1/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body class>
+    <style>
+      :root {
+        --red: hsl(7, 99%, 70%);
+        --yellow: hsl(51, 100%, 49%);
+        --green-graphic-design-text: hsl(167, 40%, 24%);
+        --blue-photography-text: hsl(198, 62%, 26%);
+        --green-footer: hsl(167, 34%, 41%);
+        --grey-950: hsl(212, 27%, 19%);
+        --grey-600: hsl(213, 9%, 39%);
+        --grey-550: hsl(232, 10%, 55%);
+        --grey-400: hsl(210, 4%, 67%);
+        --white: hsl(0, 100%, 100%);
+      }
+    </style>
+    <header class="relative h-screen">
+      <nav
+        class="fixed top-0 w-full z-20 px-6 py-6 flex justify-between items-center bg-transparent"
+      >
+        <a href="#" class="text-white text-3xl font-extrabold">sunnyside</a>
+
+        <button id="nav-toggle" class="md:hidden focus:outline-none">
+          <img src="./images/icon-hamburger.svg" alt="Menu" class="w-8 h-8" />
+        </button>
+
+        <ul
+          id="nav-menu"
+          class="hidden md:flex gap-8 text-white font-bold uppercase"
+        >
+          <ul class="hidden md:flex gap-8 text-white font-bold uppercase">
+            <li>
+              <a
+                href="#"
+                class="hover:text-[var(--yellow)] transition-colors duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-[var(--yellow )] transition-colors duration-300"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-[var(--yellow)] transition-colors duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:text-[var(--yellow)] transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </ul>
+      </nav>
+
+      <script>
+        const toggleBtn = document.getElementById("nav-toggle");
+        const navMenu = document.getElementById("nav-menu");
+
+        toggleBtn.addEventListener("click", () => {
+          navMenu.classList.toggle("hidden");
+        });
+      </script>
+
+      <img
+        src="./images/desktop/image-header.jpg"
+        class="hidden md:block absolute inset-0 w-full h-full object-cover -z-10"
+        alt="header"
+      />
+
+      <img
+        src="./images/mobile/image-header.jpg"
+        class="md:hidden absolute inset-0 w-full h-full object-cover -z-10"
+        alt="header"
+      />
+
+      <div
+        class="h-full flex flex-col justify-center items-center text-white text-center px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-10">
+          We are creatives
+        </h1>
+        <img src="./images/icon-arrow-down.svg" alt="arrow" />
+      </div>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="flex flex-col justify-center text-center md:text-center px-8 py-20"
+      >
+        <h2 class="text-3xl font-extrabold mb-6">Transform your brand</h2>
+        <p class="text-[var(--grey-500)] mb-6">
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a
+          href="#"
+          class="font-bold uppercase border-b-4 border-yellow-400 w-fit mx-auto md:mx-auto"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <div>
+        <img
+          src="./images/desktop/image-transform.jpg"
+          class="hidden md:block w-full h-full object-cover"
+        />
+        <img
+          src="./images/mobile/image-transform.jpg"
+          class="md:hidden w-full h-full object-cover"
+        />
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2">
+      <div>
+        <img
+          src="./images/desktop/image-stand-out.jpg"
+          class="hidden md:block w-full h-full object-cover"
+        />
+        <img
+          src="./images/mobile/image-stand-out.jpg"
+          class="md:hidden w-full h-full object-cover"
+        />
+      </div>
+
+      <div
+        class="flex flex-col justify-center text-center md:text-center px-8 py-20"
+      >
+        <h2 class="text-3xl font-extrabold mb-6">
+          Stand out to the right audience
+        </h2>
+        <p class="text-[var(--grey-500)] mb-6">
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we'll build and extend
+          your brand in digital places.
+        </p>
+        <a
+          href="#"
+          class="font-bold uppercase border-b-4 border-pink-400 w-fit mx-auto md:mx-auto"
+        >
+          Learn More
+        </a>
+      </div>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="relative h-[600px] flex items-center justify-center text-center px-10 pt-50"
+      >
+        <img
+          src="./images/desktop/image-graphic-design.jpg"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Graphic Design"
+        />
+        <div class="max-w-md">
+          <h3
+            class="text-2xl font-extrabold mb-4 text-[var(--green-graphic-design-text)]"
+          >
+            Graphic Design
+          </h3>
+          <p class="text-[var(--green-graphic-design-text)]">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients's
+            attention.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="relative h-[600px] flex items-center justify-center text-center px-10 pt-50"
+      >
+        <img
+          src="./images/desktop/image-photography.jpg"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Photography"
+        />
+        <div class="max-w-md">
+          <h3
+            class="text-2xl font-extrabold mb-4 text-[var(--blue-photography-text)]"
+          >
+            Photography
+          </h3>
+          <p class="text-[var(--blue-photography-text)]">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-6 text-center">
+      <h4
+        class="uppercase text-[var(--grey-500)] font-extrabold tracking-widest mb-16"
+      >
+        Client Testimonials
+      </h4>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <img
+            src="./images/image-emily.jpg"
+            class="mx-auto rounded-full w-16 mb-8"
+          />
+          <p class="text-[var(--grey-500)] mb-6">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <h5 class="font-extrabold">Emily R.</h5>
+          <small class="text-gray-400">Marketing Director</small>
+        </div>
+
+        <div>
+          <img
+            src="./images/image-thomas.jpg"
+            class="mx-auto rounded-full w-16 mb-8"
+          />
+          <p class="text-[var(--grey-500)] mb-6">
+            Sunnyside's enthusiasm coupled with their keen interest in our
+            brand's success made it a satisfying and enjoyable experience.
+          </p>
+          <h5 class="font-extrabold">Thomas S.</h5>
+          <small class="text-gray-400">Chief Operating Officer</small>
+        </div>
+
+        <div>
+          <img
+            src="./images/image-jennie.jpg"
+            class="mx-auto rounded-full w-16 mb-8"
+          />
+          <p class="text-[var(--grey-500)] mb-6">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <h5 class="font-extrabold">Jennie F.</h5>
+          <small class="text-[var(--grey-400)]">Business Owner</small>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-2 md:grid-cols-4">
+      <img
+        src="./images/mobile/image-gallery-milkbottles.jpg"
+        class="md:hidden"
+      />
+      <img src="./images/mobile/image-gallery-orange.jpg" class="md:hidden" />
+      <img src="./images/mobile/image-gallery-cone.jpg" class="md:hidden" />
+      <img
+        src="./images/mobile/image-gallery-sugar-cubes.jpg"
+        class="md:hidden"
+      />
+
+      <img
+        src="./images/desktop/image-gallery-milkbottles.jpg"
+        class="hidden md:block"
+      />
+      <img
+        src="./images/desktop/image-gallery-orange.jpg"
+        class="hidden md:block"
+      />
+      <img
+        src="./images/desktop/image-gallery-cone.jpg"
+        class="hidden md:block"
+      />
+      <img
+        src="./images/desktop/image-gallery-sugarcubes.jpg"
+        class="hidden md:block"
+      />
+    </section>
+
+    <footer class="bg-[var(--green-footer)] text-center py-16">
+      <h2
+        class="text-3xl font-extrabold text-[var(--green-graphic-design-text)] mb-10"
+      >
+        Sunnyside
+      </h2>
+
+      <div
+        class="flex justify-center gap-10 text-[var(--green-graphic-design-text)] font-bold"
+      >
+        <a href="#" class="hover:text-white transition">About</a>
+        <a href="#" class="hover:text-white transition">Services</a>
+        <a href="#" class="hover:text-white transition">Projects</a>
+      </div>
+
+      <div class="flex justify-center gap-6 mt-10">
+        <img src="./images/icon-facebook.svg" />
+        <img src="./images/icon-instagram.svg" />
+        <img src="./images/icon-twitter.svg" />
+        <img src="./images/icon-pinterest.svg" />
+      </div>
+    </footer>
+  </body>
+</html>
