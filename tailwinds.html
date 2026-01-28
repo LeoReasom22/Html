@@ -39,56 +39,73 @@
       >
         <a href="#" class="text-white text-3xl font-extrabold">sunnyside</a>
 
-        <button id="nav-toggle" class="md:hidden focus:outline-none">
-          <img src="./images/icon-hamburger.svg" alt="Menu" class="w-8 h-8" />
-        </button>
-
-        <ul
-          id="nav-menu"
-          class="hidden md:flex gap-8 text-white font-bold uppercase"
-        >
-          <ul class="hidden md:flex gap-8 text-white font-bold uppercase">
-            <li>
-              <a
-                href="#"
-                class="hover:text-[var(--yellow)] transition-colors duration-300"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="hover:text-[var(--yellow )] transition-colors duration-300"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="hover:text-[var(--yellow)] transition-colors duration-300"
-                >Projects</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="hover:text-[var(--yellow)] transition-colors duration-300"
-                >Contact</a
-              >
-            </li>
-          </ul>
+        <ul class="hidden md:flex gap-8 text-white font-bold uppercase">
+          <li>
+            <a
+              href="#"
+              class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-sky-300 rounded-3xl"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-sky-300 rounded-3xl"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-sky-300 rounded-3xl"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-sky-300 rounded-3xl"
+              >Contact</a
+            >
+          </li>
         </ul>
+
+        <button
+          id="menu-btn"
+          class="md:hidden focus:outline-none"
+          aria-label="Open menu"
+        >
+          <img src="./images/icon-hamburger.svg" alt="menu" />
+        </button>
       </nav>
-
-      <script>
-        const toggleBtn = document.getElementById("nav-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        toggleBtn.addEventListener("click", () => {
-          navMenu.classList.toggle("hidden");
-        });
-      </script>
-
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-28 left-8 right-8 bg-white py-12 flex flex-col items-center gap-8 md:hidden shadow-xl"
+      >
+        <div
+          class="absolute -top-6 right-0 w-0 h-0 border-l-[30px] border-l-transparent border-b-[30px] border-b-white"
+        ></div>
+        <a
+          href="#"
+          class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-yellow-400 rounded-3xl"
+          >About</a
+        >
+        <a
+          href="#"
+          class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-yellow-400 rounded-3xl"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-yellow-400 rounded-3xl"
+          >Projects</a
+        >
+        <button
+          class="hover:text-opacity-70 transition border-none px-4 py-2 hover:bg-yellow-400 rounded-3xl"
+        >
+          Contact
+        </button>
+      </div>
       <img
         src="./images/desktop/image-header.jpg"
         class="hidden md:block absolute inset-0 w-full h-full object-cover -z-10"
@@ -316,5 +333,19 @@
         <img src="./images/icon-pinterest.svg" />
       </div>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      window.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
   </body>
 </html>
