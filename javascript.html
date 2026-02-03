@@ -484,7 +484,6 @@
     <script>
       let cart = [];
 
-      // ၁။ Product Card တစ်ခုချင်းစီကို ခိုင်းစေခြင်း
       const productCards = document.querySelectorAll(".product-card");
 
       productCards.forEach(function (productCard) {
@@ -501,21 +500,18 @@
             .innerText.replace("$", ""),
         );
 
-        // Add to Cart နှိပ်တဲ့အခါ
         addBtn.addEventListener("click", function () {
           addBtn.classList.add("hidden");
           qtySelector.classList.remove("hidden");
           addToCart(name, price);
         });
 
-        // "+" နှိပ်တဲ့အခါ
         plusBtn.addEventListener("click", function () {
           updateQty(name, 1);
           const item = findItem(name);
           qtyCount.innerText = item.qty;
         });
 
-        // "-" နှိပ်တဲ့အခါ
         minusBtn.addEventListener("click", function () {
           const item = findItem(name);
           if (item && item.qty > 1) {
@@ -529,13 +525,11 @@
         });
       });
 
-      // ၂။ Cart ထဲကို ပစ္စည်းထည့်တဲ့ Function
       function addToCart(name, price) {
         cart.push({ name: name, price: price, qty: 1 });
         renderCart();
       }
 
-      // ၃။ ပစ္စည်းအရေအတွက် ပြောင်းလဲတဲ့ Function
       function updateQty(name, delta) {
         for (let i = 0; i < cart.length; i++) {
           if (cart[i].name === name) {
@@ -545,7 +539,6 @@
         renderCart();
       }
 
-      // ၄။ Cart ထဲကနေ ပစ္စည်းပြန်ဖျက်တဲ့ Function
       function removeFromCart(name) {
         let newCart = [];
         for (let i = 0; i < cart.length; i++) {
@@ -557,7 +550,6 @@
         renderCart();
       }
 
-      // ၅။ နာမည်တူပစ္စည်းကို ရှာပေးတဲ့ Function
       function findItem(name) {
         for (let i = 0; i < cart.length; i++) {
           if (cart[i].name === name) {
@@ -567,7 +559,6 @@
         return null;
       }
 
-      // ၆။ Cart UI ကို အမြဲတမ်း Update လုပ်ပေးတဲ့ Function
       function renderCart() {
         const container = document.getElementById("cart-items-container");
         const footer = document.getElementById("cart-footer");
@@ -611,13 +602,11 @@
         }
       }
 
-      // ၇။ Confirm Order နှိပ်တဲ့အခါ Modal ပြပေးခြင်း
       document
         .getElementById("confirm-btn")
         .addEventListener("click", function () {
           const modal = document.getElementById("modal-overlay");
           modal.classList.remove("hidden");
-          // အပေါ်က render logic အတိုင်း modal summary ထဲမှာလည်း ပြပေးရုံပါပဲ
         });
 
       document
