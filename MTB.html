@@ -30,7 +30,16 @@
             class="h-12 lg:h-14"
             alt="Logo"
           />
-          <nav class="hidden lg:flex flex-1 items-center gap-16 text-lg">
+          <nav
+            id="gnav"
+            class="fixed top-0 right-0 z-50 h-full w-72 bg-slate-500 text-white shadow-xl flex flex-col gap-6 p-6 transform translate-x-full transition-transform duration-300 ease-in-out lg:static lg:h-auto lg:w-auto lg:flex-row lg:bg-transparent lg:text-black lg:shadow-none lg:translate-x-0 lg:p-0"
+          >
+            <button
+              id="close-btn"
+              class="self-end text-2xl font-bold lg:hidden"
+            >
+              ✕
+            </button>
             <a href="#" class="hover:text-red-600 transition">Banking</a>
             <a href="#" class="hover:text-red-600 transition">Bancassurance</a>
             <a href="#" class="hover:text-red-600 transition">Who we are</a>
@@ -39,7 +48,7 @@
           </nav>
         </div>
 
-        <div class="flex items-center justify-end gap-2 lg:gap-12">
+        <div class="flex items-center justify-end gap-3 lg:gap-12">
           <div class="hidden sm:flex items-center text-base">
             <span class="text-gray-400">EN</span>
             <span class="mx-1 text-gray-300">|</span>
@@ -49,7 +58,7 @@
             <img
               src="./MTB/logo/Vector.svg"
               alt="Search"
-              class="w-6 h-6 lg:w-auto"
+              class="w-5 h-5 lg:w-auto"
             />
           </button>
           <a
@@ -58,9 +67,22 @@
           >
             Login
           </a>
-          <button class="block lg:hidden">☰</button>
+          <button id="menu-btn" class="block lg:hidden">☰</button>
         </div>
       </div>
+      <script>
+        const nav = document.getElementById("gnav");
+        const openBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+
+        openBtn.addEventListener("click", () => {
+          nav.classList.remove("translate-x-full");
+        });
+
+        closeBtn.addEventListener("click", () => {
+          nav.classList.add("translate-x-full");
+        });
+      </script>
     </header>
 
     <section class="w-full flex justify-center bg-gray-100">
@@ -195,9 +217,10 @@
                 </ul>
                 <a
                   href="#"
-                  class="font-bold text-[#00984A] text-sm flex items-center mt-4 gap-1 hover:underline"
+                  class="text-[#00984A] text-sm flex items-center mt-4 gap-1 hover:underline"
                 >
-                  More Detail ><span class="text-lg"></span>
+                  More Detail
+                  <img src="./MTB/logo/graterthan.svg" alt="greaterthan" />
                 </a>
               </div>
             </div>
@@ -234,9 +257,10 @@
                 </ul>
                 <a
                   href="#"
-                  class="mt-4 text-[#00984A] font-bold text-sm flex items-center gap-1 hover:underline"
+                  class="mt-4 text-[#00984A] text-sm flex items-center gap-1 hover:underline"
                 >
-                  More Detail > <span class="text-lg"></span>
+                  More Detail
+                  <img src="./MTB/logo/graterthan.svg" alt="greaterthan" />
                 </a>
               </div>
             </div>
@@ -273,9 +297,10 @@
               </ul>
               <a
                 href="#"
-                class="mt-6 text-[#00A651] font-bold text-sm flex items-center gap-1 hover:underline"
+                class="mt-6 text-[#00A651] text-sm flex items-center gap-1 hover:underline"
               >
-                More Detail ><span class="text-lg"></span>
+                More Detail
+                <img src="./MTB/logo/graterthan.svg" alt="greaterthan" />
               </a>
             </div>
           </div>
@@ -295,7 +320,7 @@
               <div class="mb-4">
                 <span
                   class="bg-[#DEE2FE] text-[#4F46E5] text-sm font-bold px-2.5 py-1 rounded"
-                  >Shorten Laon</span
+                  >Shorten Loan</span
                 >
               </div>
               <ul class="space-y-4 flex-grow font-sm">
@@ -313,9 +338,10 @@
                 </li>
                 <a
                   href="#"
-                  class="mt-6 text-[#00984A] font-bold text-sm flex items-center gap-1 hover:underline"
+                  class="mt-6 text-[#00984A] text-sm flex items-center gap-1 hover:underline"
                 >
-                  More Detail > <span class="text-lg"></span>
+                  More Detail
+                  <img src="./MTB/logo/graterthan.svg" alt="greaterthan" />
                 </a>
               </ul>
             </div>
@@ -325,7 +351,7 @@
     </section>
     <!--rate and others-->
     <section class="bg-slate-50">
-      <div class="mb-8">
+      <div class="mb-8 px-4">
         <span class="text-[32px]">Rates & Others</span>
       </div>
       <div
@@ -354,7 +380,7 @@
               </div>
 
               <div
-                class="flex flex-col items-end lg:flex-row lg:items-center gap-2 lg:gap-x-45 text-[15px]"
+                class="flex flex-col items-end md:gap-x-20 lg:flex-row lg:items-center gap-2 lg:gap-x-45 text-[15px]"
               >
                 <div class="flex items-center gap-2">
                   <span class="text-gray-400">Buy</span>
@@ -367,7 +393,6 @@
                 </div>
               </div>
             </div>
-
             <div class="flex items-center justify-between py-2">
               <div class="flex items-center gap-4">
                 <img
@@ -488,7 +513,6 @@
           <div
             class="flex flex-col items-center justify-center bg-white rounded-2xl p-6 border-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-900 group"
           >
-            " >
             <img
               src="./MTB/logo/bank.svg"
               class="h-12 w-12 lg:w-16 lg:h-16 mb-2"
@@ -514,7 +538,7 @@
     <section class="bg-[#0b2760] text-white pt-16 pb-10 px-8">
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-6 lg:gap-12 mb-16">
         <div class="col-span-1 lg:col-span-2">
-          <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+          <h4 class="font-lg text-lg mb-6">Contact Us</h4>
           <div class="space-y-5 text-sm mb-8">
             <div class="flex items-start gap-3">
               <img src="./MTB/logo/line-md_email.svg" class="w-5 h-5 mt-0.5" />
@@ -563,7 +587,7 @@
           </div>
         </div>
         <div class="col-span-2 lg:col-span-1">
-          <h4 class="font-bold text-lg mb-6">Personal Banking</h4>
+          <h4 class="font-lg text-lg mb-6">Personal Banking</h4>
           <ul class="space-y-3 text-sm text-gray-300">
             <li>
               <a href="#" class="hover:text-white transition-colors">Deposit</a>
@@ -596,7 +620,7 @@
           </ul>
         </div>
         <div class="col-span-2 lg:col-span-1">
-          <h4 class="font-bold text-lg mb-6">Busincess Banking</h4>
+          <h4 class="font-lg text-lg mb-6">Busincess Banking</h4>
           <ul class="space-y-3 text-sm text-gray-300">
             <li>
               <a href="#" class="hover:text-white transition-colors">Deposit</a>
@@ -629,7 +653,7 @@
           </ul>
         </div>
         <div class="col-span-2 lg:col-span-1">
-          <h4 class="font-bold text-lg mb-6">Personal Banking</h4>
+          <h4 class="font-lg text-lg mb-6">Personal Banking</h4>
           <ul class="space-y-3 text-sm text-gray-300">
             <li>
               <a href="#" class="hover:text-white transition-colors"
@@ -655,7 +679,7 @@
           </ul>
         </div>
         <div class="col-span-2 lg:col-span-1">
-          <h4 class="font-bold text-lg mb-6">Useful Links</h4>
+          <h4 class="font-lg text-lg mb-6">Useful Links</h4>
           <ul class="space-y-3 text-sm text-gray-300">
             <li>
               <a href="#" class="hover:text-white transition-colors"
@@ -675,15 +699,15 @@
         class="bg-[#0E3178] border-t border-white/10 px-4 sm:px-8 lg:px-16 py-5"
       >
         <div
-          class="max-w-7xl mx-auto flex flex-col items-center gap-3 text-sm text-gray-400 text-center"
+          class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:justify-center items-center gap-2 lg:gap-4 text-sm text-white text-center"
         >
           <span> © 2024 Myanma Tourism Bank. All Rights Reserved. </span>
 
           <div class="flex gap-4">
-            <a href="#" class="hover:text-white transition-colors">
+            <a href="#" class="hover:text-gray-300 transition-colors">
               Terms & Conditions
             </a>
-            <a href="#" class="hover:text-white transition-colors">
+            <a href="#" class="hover:text-gray-300 transition-colors">
               Privacy Policies
             </a>
           </div>
