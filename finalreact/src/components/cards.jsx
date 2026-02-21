@@ -9,7 +9,7 @@ function Card({ item }) {
   return (
     <div
       onClick={() => switchRoute(item.id)}
-      className="w-full flex flex-col border-none  p-2 rounded-xl shadow-md hover:shadow-lg transition-all"
+      className="w-full flex flex-col border-none p-2 rounded-xl shadow-md hover:shadow-lg transition-all dw-full flex flex-col border-none p-2 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] duration-300 hover:-translate-y-1 cursor-pointer"
     >
       <img
         src={item.avatar}
@@ -18,7 +18,7 @@ function Card({ item }) {
       />
 
       <span className="text-lg font-bold text-gray-800">{item.name}</span>
-      <div className="flex flex-row  text-sm text-gray-500 mt-1">
+      <div className="flex flex-row  text-sm  gap-4 text-gray-500 mt-1">
         <span>Gender: {item.gender} </span>
 
         <span>

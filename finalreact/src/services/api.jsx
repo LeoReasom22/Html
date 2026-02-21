@@ -35,7 +35,7 @@ function Api() {
         </div>
         <button
           onClick={() => setShowAll(!showAll)}
-          className=" flex leading-tight border-2 border-blue-900 text-blue-900 px-5 py-2 rounded-full text-sm font-medium hover:bg-purple-300 hover:text-black transition"
+          className=" flex leading-tight border-2 border-blue-900 text-blue-900 px-5 py-2 rounded-full text-sm font-medium hover:bg-blue-900 hover:text-white transition"
         >
           {showAll ? "View Less" : "View More"}
           <svg
@@ -61,7 +61,6 @@ function Api() {
           <Card key={item.id} item={item} />
         ))}
       </div>
-      <div></div>
     </div>
   );
 }
